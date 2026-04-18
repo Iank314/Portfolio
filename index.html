@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ian Kaufman — Software Engineer, Computer Science & Applied Math student at Stony Brook University." />
-  <title>Ian Kaufman — Software Engineer</title>
+  <meta name="description" content="Ian Kaufman. Software Engineer and Computer Science & Applied Math student at Stony Brook University." />
+  <title>Ian Kaufman | Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -75,12 +75,18 @@
             systems</strong>, and <strong>data infrastructure</strong>.
           </p>
           <p>
-            I've shipped production work across the stack — architecting
+            I've shipped production work across the stack, architecting
             deduplication pipelines over 300K+ Firestore records, tuning
             PostgreSQL query plans to cut p95 latency by 35%, and building a
             distributed task queue with atomic concurrent job claiming. I care
             about writing code that's correct under concurrency, observable in
             production, and maintainable as systems grow.
+          </p>
+          <p>
+            Away from the keyboard, I'm an avid strategy gamer. Chess, Catan,
+            and Age of Mythology are long-time favorites; they scratch the
+            same itch as engineering: modeling systems, reading state, and
+            planning a few moves ahead.
           </p>
           <p>Technologies I've been working with recently:</p>
           <ul class="tech-list">
@@ -119,7 +125,7 @@
         </div>
         <div class="tab-content">
           <article class="panel active" id="ally">
-            <h3>Technology Intern — Software Engineer (ETO)<span class="company"> @ Ally Financial</span></h3>
+            <h3>Technology Intern, Software Engineer (ETO)<span class="company"> @ Ally Financial</span></h3>
             <p class="meta">Incoming May 2026 · Charlotte, NC</p>
             <ul>
               <li>Incoming intern on the Enterprise Technology &amp; Platform Automation team, supporting software engineering initiatives across internal platforms.</li>
@@ -129,7 +135,7 @@
             <h3>Data Engineering Intern<span class="company"> @ MyStage Music</span></h3>
             <p class="meta">Jan 2026 – Present · Remote</p>
             <ul>
-              <li>Architected and deployed an end-to-end deduplication pipeline processing 300K+ Firestore records — ingesting raw data from Firebase, enforcing schema integrity via Pydantic models, executing SQL deduplication and scoring transformations in BigQuery, and writing validated results back to Firestore.</li>
+              <li>Architected and deployed an end-to-end deduplication pipeline processing 300K+ Firestore records, ingesting raw data from Firebase, enforcing schema integrity via Pydantic models, executing SQL deduplication and scoring transformations in BigQuery, and writing validated results back to Firestore.</li>
               <li>Implemented bidirectional Firestore↔BigQuery sync workflows, ensuring production admin collections stay current with deduplicated output surfaced on the admin UI.</li>
             </ul>
           </article>
@@ -177,7 +183,7 @@
               A horizontally scalable task queue built on PostgreSQL with an
               async aiohttp broker and a multi-worker pool. Uses
               <code>SELECT ... FOR UPDATE SKIP LOCKED</code> for atomic concurrent
-              job claiming — proven safe under load via integration tests that
+              job claiming, proven safe under load via integration tests that
               run against real PostgreSQL.
             </p>
             <p>
@@ -254,7 +260,7 @@ scores = cosine_similarity(query_vec, mat)
           <div class="project-body">
             <p>
               A full-stack <strong>Django REST</strong> application managing
-              employees, departments, attendance, and performance — with
+              employees, departments, attendance, and performance. Includes
               JWT-secured APIs, Swagger-documented endpoints, and a
               PostgreSQL-backed relational schema shipped via Django
               migrations.
@@ -417,7 +423,7 @@ scores = cosine_similarity(query_vec, mat)
       </div>
       <div class="resume-card">
         <div class="resume-copy">
-          <h3>Ian Kaufman — Software Engineer</h3>
+          <h3>Ian Kaufman | Software Engineer</h3>
           <p>
             Full one-page resume covering education, experience, projects,
             skills, leadership, and certifications. Updated April 2026.
@@ -435,8 +441,8 @@ scores = cosine_similarity(query_vec, mat)
       <h2 class="contact-heading">Let's Connect</h2>
       <p class="contact-sub">
         I'm open to new-grad conversations, internship opportunities, and
-        interesting backend/infra projects. My inbox is always open — I'll do
-        my best to get back to you.
+        interesting backend/infra projects. My inbox is always open, and I'll
+        do my best to get back to you.
       </p>
       <a href="mailto:Kaufmanian49@gmail.com" class="btn btn-primary btn-lg">Say Hello</a>
       <div class="contact-links">
