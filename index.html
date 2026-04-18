@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ian Kaufman — Software Engineer, Computer Science & Applied Math student at Stony Brook University." />
+  <title>Ian Kaufman — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#top" class="nav-logo">IK<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="hero-inner">
+      <p class="hero-kicker">Hi, my name is</p>
+      <h1 class="hero-name">Ian Kaufman.</h1>
+      <h2 class="hero-tagline">I build reliable, data-driven backend systems.</h2>
+      <p class="hero-sub">
+        I'm a Computer Science &amp; Applied Math student at Stony Brook University,
+        focused on backend engineering, distributed systems, and data infrastructure.
+        Currently interning as a Data Engineer at MyStage Music and incoming
+        Software Engineering Intern at Ally Financial.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View my work</a>
+        <a href="mailto:Kaufmanian49@gmail.com" class="btn btn-outline">Get in touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Iank314" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+        <span class="divider">/</span>
+        <a href="https://www.linkedin.com/in/ian-kaufman-7a9408329/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <span class="divider">/</span>
+        <a href="mailto:Kaufmanian49@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <div class="section-head">
+        <span class="section-num">01.</span>
+        <h2 class="section-title">About Me</h2>
+        <span class="section-rule"></span>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a junior at <strong>Stony Brook University</strong> pursuing a
+            double major in Computer Science and Applied Mathematics &amp;
+            Statistics, with a 3.65 GPA. My interests sit at the intersection
+            of <strong>backend engineering</strong>, <strong>distributed
+            systems</strong>, and <strong>data infrastructure</strong>.
+          </p>
+          <p>
+            I've shipped production work across the stack — architecting
+            deduplication pipelines over 300K+ Firestore records, tuning
+            PostgreSQL query plans to cut p95 latency by 35%, and building a
+            distributed task queue with atomic concurrent job claiming. I care
+            about writing code that's correct under concurrency, observable in
+            production, and maintainable as systems grow.
+          </p>
+          <p>Technologies I've been working with recently:</p>
+          <ul class="tech-list">
+            <li>Python / FastAPI</li>
+            <li>PostgreSQL</li>
+            <li>Django</li>
+            <li>Docker Compose</li>
+            <li>BigQuery / Firestore</li>
+            <li>GitHub Actions</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <div class="card-row"><span class="card-label">Role</span><span>Software Engineer</span></div>
+          <div class="card-row"><span class="card-label">Location</span><span>New York, NY</span></div>
+          <div class="card-row"><span class="card-label">School</span><span>Stony Brook University</span></div>
+          <div class="card-row"><span class="card-label">Grad</span><span>May 2027</span></div>
+          <div class="card-row"><span class="card-label">GPA</span><span>3.65 / 4.00</span></div>
+          <div class="card-row"><span class="card-label">Focus</span><span>Backend &amp; Data</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-head">
+        <span class="section-num">02.</span>
+        <h2 class="section-title">Experience</h2>
+        <span class="section-rule"></span>
+      </div>
+      <div class="experience">
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="ally" role="tab">Ally Financial</button>
+          <button class="tab" data-tab="mystage" role="tab">MyStage Music</button>
+          <button class="tab" data-tab="springer" role="tab">Springer Capital</button>
+          <button class="tab" data-tab="bac" role="tab">Business Analytics Club</button>
+        </div>
+        <div class="tab-content">
+          <article class="panel active" id="ally">
+            <h3>Technology Intern — Software Engineer (ETO)<span class="company"> @ Ally Financial</span></h3>
+            <p class="meta">Incoming May 2026 · Charlotte, NC</p>
+            <ul>
+              <li>Incoming intern on the Enterprise Technology &amp; Platform Automation team, supporting software engineering initiatives across internal platforms.</li>
+            </ul>
+          </article>
+          <article class="panel" id="mystage">
+            <h3>Data Engineering Intern<span class="company"> @ MyStage Music</span></h3>
+            <p class="meta">Jan 2026 – Present · Remote</p>
+            <ul>
+              <li>Architected and deployed an end-to-end deduplication pipeline processing 300K+ Firestore records — ingesting raw data from Firebase, enforcing schema integrity via Pydantic models, executing SQL deduplication and scoring transformations in BigQuery, and writing validated results back to Firestore.</li>
+              <li>Implemented bidirectional Firestore↔BigQuery sync workflows, ensuring production admin collections stay current with deduplicated output surfaced on the admin UI.</li>
+            </ul>
+          </article>
+          <article class="panel" id="springer">
+            <h3>Backend Software Engineering Intern<span class="company"> @ Springer Capital</span></h3>
+            <p class="meta">Jul 2025 – Oct 2025 · Remote</p>
+            <ul>
+              <li>Designed a normalized PostgreSQL schema (employees, departments, roles) with foreign keys, unique constraints, and composite/partial indexes aligned to high-frequency queries; shipped migrations via Django.</li>
+              <li>Eliminated N+1 queries using <code>select_related</code>/<code>prefetch_related</code> and tuned execution plans with <code>EXPLAIN ANALYZE</code>, reducing p95 latency by 35% and cutting DB CPU/IO by 10% on heavy endpoints.</li>
+            </ul>
+          </article>
+          <article class="panel" id="bac">
+            <h3>Vice President &amp; Co-Founder<span class="company"> @ Business Analytics Club, SBU</span></h3>
+            <p class="meta">Jan 2026 – Present · Stony Brook, NY</p>
+            <ul>
+              <li>Co-founded and led a student organization focused on analytics and data-driven decision making.</li>
+              <li>Organized industry speaker events with professionals from finance/tech firms such as Alvarez &amp; Marsal.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head">
+        <span class="section-num">03.</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <span class="section-rule"></span>
+      </div>
+
+      <article class="project project-featured">
+        <div class="project-meta">
+          <p class="project-overline">Featured Project</p>
+          <h3 class="project-title"><a href="https://github.com/Iank314" target="_blank" rel="noopener">Distributed Task Queue</a></h3>
+          <div class="project-body">
+            <p>
+              A horizontally scalable task queue built with an aiohttp broker and
+              PostgreSQL-backed job store. Uses <code>SELECT ... FOR UPDATE SKIP LOCKED</code>
+              for atomic concurrent job claiming with zero double-processing.
+            </p>
+            <p>
+              Implements priority scheduling, exponential backoff retries, and a
+              dead-letter queue. A metrics endpoint and dashboard surface queue
+              depth, throughput, and failure rate. Full CI via GitHub Actions
+              runs integration tests against real PostgreSQL instances.
+            </p>
+          </div>
+          <ul class="project-tech">
+            <li>aiohttp</li><li>PostgreSQL</li><li>Python</li><li>Docker Compose</li><li>GitHub Actions</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/Iank314" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="visual-code">
+            <pre><code><span class="c-kw">SELECT</span> id, payload
+<span class="c-kw">FROM</span> jobs
+<span class="c-kw">WHERE</span> status = <span class="c-str">'queued'</span>
+  <span class="c-kw">AND</span> run_at &lt;= <span class="c-fn">NOW()</span>
+<span class="c-kw">ORDER BY</span> priority <span class="c-kw">DESC</span>, run_at
+<span class="c-kw">LIMIT</span> 1
+<span class="c-kw">FOR UPDATE SKIP LOCKED</span>;</code></pre>
+          </div>
+        </div>
+      </article>
+
+      <article class="project project-featured reverse">
+        <div class="project-meta">
+          <p class="project-overline">Featured Project</p>
+          <h3 class="project-title"><a href="https://github.com/Iank314" target="_blank" rel="noopener">Book Recommender</a></h3>
+          <div class="project-body">
+            <p>
+              A full-stack book recommendation app with a FastAPI backend that
+              aggregates and reconciles data from multiple external APIs,
+              implementing result deduplication, ranking, and stateful user
+              cart management.
+            </p>
+            <p>
+              Uses TF-IDF and cosine similarity to recommend books from a
+              user's saved collection. Shaped by distributed-systems principles
+              across the frontend, backend, and data layer.
+            </p>
+          </div>
+          <ul class="project-tech">
+            <li>FastAPI</li><li>Python</li><li>scikit-learn</li><li>JavaScript</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/Iank314" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="visual-code">
+            <pre><code><span class="c-kw">from</span> sklearn.feature_extraction.text <span class="c-kw">import</span> TfidfVectorizer
+<span class="c-kw">from</span> sklearn.metrics.pairwise <span class="c-kw">import</span> cosine_similarity
+
+vec   = TfidfVectorizer(stop_words=<span class="c-str">"english"</span>)
+mat   = vec.fit_transform(corpus)
+scores = cosine_similarity(query_vec, mat)
+<span class="c-kw">return</span> <span class="c-fn">rank</span>(scores, top_k=10)</code></pre>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-head">
+        <span class="section-num">04.</span>
+        <h2 class="section-title">Skills &amp; Tools</h2>
+        <span class="section-rule"></span>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul>
+            <li>Java</li><li>Python</li><li>C / C++</li><li>SQL</li>
+            <li>JavaScript</li><li>R</li><li>HTML/CSS</li><li>Shell Scripting</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Frameworks &amp; Libraries</h3>
+          <ul>
+            <li>Django</li><li>FastAPI</li><li>Flask</li><li>SQLAlchemy</li>
+            <li>React</li><li>Node.js / Express</li><li>Pytest</li><li>NumPy / Pandas</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Tools &amp; Platforms</h3>
+          <ul>
+            <li>Git / GitHub</li><li>Docker</li><li>Docker Compose</li><li>PostgreSQL</li>
+            <li>MongoDB</li><li>Uvicorn</li><li>GitHub Actions</li><li>VS Code</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud &amp; Infrastructure</h3>
+          <ul>
+            <li>AWS (EC2, S3)</li><li>Azure App Service</li>
+            <li>GCP BigQuery</li><li>GCP Firestore</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="section-head">
+        <span class="section-num">05.</span>
+        <h2 class="section-title">Education &amp; Certifications</h2>
+        <span class="section-rule"></span>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card primary">
+          <div class="edu-header">
+            <h3>Stony Brook University</h3>
+            <span class="edu-date">Expected May 2027</span>
+          </div>
+          <p class="edu-degree">B.S. Computer Science &amp; Applied Mathematics and Statistics (Double Major)</p>
+          <p class="edu-gpa">GPA: 3.65 / 4.00</p>
+          <p class="edu-label">Relevant Coursework</p>
+          <ul class="edu-courses">
+            <li>Software Development</li>
+            <li>Data Structures</li>
+            <li>Analysis of Algorithms</li>
+            <li>Operating Systems</li>
+            <li>Artificial Intelligence</li>
+            <li>Computational Theory</li>
+            <li>Data Science</li>
+            <li>Probability &amp; Statistics</li>
+            <li>Object-Oriented Programming</li>
+            <li>Scripting Languages</li>
+            <li>Calculus 3</li>
+          </ul>
+        </div>
+        <div class="edu-card">
+          <h3>Certifications</h3>
+          <ul class="cert-list">
+            <li>
+              <span class="cert-name">AWS Cloud Technical Essentials</span>
+              <span class="cert-date">Coursera · Jul 2025</span>
+            </li>
+            <li>
+              <span class="cert-name">Deep Learning and Neural Networks</span>
+              <span class="cert-date">Coursera · Jun 2025</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <span class="section-num">06.</span>
+      <h2 class="contact-heading">Let's Connect</h2>
+      <p class="contact-sub">
+        I'm open to new-grad conversations, internship opportunities, and
+        interesting backend/infra projects. My inbox is always open — I'll do
+        my best to get back to you.
+      </p>
+      <a href="mailto:Kaufmanian49@gmail.com" class="btn btn-primary btn-lg">Say Hello</a>
+      <div class="contact-links">
+        <a href="https://github.com/Iank314" target="_blank" rel="noopener">github.com/Iank314</a>
+        <a href="https://www.linkedin.com/in/ian-kaufman-7a9408329/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="tel:9293237333">929-323-7333</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed &amp; built by Ian Kaufman</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
