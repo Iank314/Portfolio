@@ -20,6 +20,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
+        <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="nav-toggle" aria-label="Toggle navigation">
@@ -30,6 +31,9 @@
 
   <header id="top" class="hero">
     <div class="hero-inner">
+      <div class="hero-portrait" aria-hidden="true">
+        <img src="Headshot.png" alt="Ian Kaufman" onerror="this.parentElement.style.display='none'" />
+      </div>
       <p class="hero-kicker">Hi, my name is</p>
       <h1 class="hero-name">Ian Kaufman.</h1>
       <h2 class="hero-tagline">I build reliable, data-driven backend systems.</h2>
@@ -41,7 +45,8 @@
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View my work</a>
-        <a href="mailto:Kaufmanian49@gmail.com" class="btn btn-outline">Get in touch</a>
+        <a href="Ian_Kaufman_Resume.pdf" class="btn btn-outline" download>Download resume</a>
+        <a href="mailto:Kaufmanian49@gmail.com" class="btn btn-ghost">Get in touch</a>
       </div>
       <div class="hero-socials">
         <a href="https://github.com/Iank314" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
@@ -157,25 +162,27 @@
       <article class="project project-featured">
         <div class="project-meta">
           <p class="project-overline">Featured Project</p>
-          <h3 class="project-title"><a href="https://github.com/Iank314" target="_blank" rel="noopener">Distributed Task Queue</a></h3>
+          <h3 class="project-title"><a href="https://github.com/Iank314/task-queue" target="_blank" rel="noopener">Distributed Task Queue</a></h3>
           <div class="project-body">
             <p>
-              A horizontally scalable task queue built with an aiohttp broker and
-              PostgreSQL-backed job store. Uses <code>SELECT ... FOR UPDATE SKIP LOCKED</code>
-              for atomic concurrent job claiming with zero double-processing.
+              A horizontally scalable task queue built on PostgreSQL with an
+              async aiohttp broker and a multi-worker pool. Uses
+              <code>SELECT ... FOR UPDATE SKIP LOCKED</code> for atomic concurrent
+              job claiming — proven safe under load via integration tests that
+              run against real PostgreSQL.
             </p>
             <p>
-              Implements priority scheduling, exponential backoff retries, and a
-              dead-letter queue. A metrics endpoint and dashboard surface queue
-              depth, throughput, and failure rate. Full CI via GitHub Actions
-              runs integration tests against real PostgreSQL instances.
+              Features priority scheduling, exponential-backoff retries, job
+              cancellation, and a dead-letter queue for permanent failures. A
+              dashboard UI and metrics endpoint surface queue health, and full
+              CI via GitHub Actions guards correctness on every push.
             </p>
           </div>
           <ul class="project-tech">
             <li>aiohttp</li><li>PostgreSQL</li><li>Python</li><li>Docker Compose</li><li>GitHub Actions</li>
           </ul>
           <div class="project-links">
-            <a href="https://github.com/Iank314" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub →</a>
+            <a href="https://github.com/Iank314/task-queue" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub →</a>
           </div>
         </div>
         <div class="project-visual">
@@ -194,25 +201,28 @@
       <article class="project project-featured reverse">
         <div class="project-meta">
           <p class="project-overline">Featured Project</p>
-          <h3 class="project-title"><a href="https://github.com/Iank314" target="_blank" rel="noopener">Book Recommender</a></h3>
+          <h3 class="project-title"><a href="https://github.com/Iank314/BookRecommender" target="_blank" rel="noopener">Book Recommender</a></h3>
           <div class="project-body">
             <p>
-              A full-stack book recommendation app with a FastAPI backend that
-              aggregates and reconciles data from multiple external APIs,
-              implementing result deduplication, ranking, and stateful user
-              cart management.
+              A full-stack recommendation system with a FastAPI backend that
+              aggregates and reconciles results from <strong>Google Books</strong>
+              and <strong>Open Library</strong>, deduplicating across APIs and
+              scoring each match on a 0–100 hybrid formula (relevance +
+              popularity signals).
             </p>
             <p>
-              Uses TF-IDF and cosine similarity to recommend books from a
-              user's saved collection. Shaped by distributed-systems principles
-              across the frontend, backend, and data layer.
+              Uses <strong>TF-IDF vectorization</strong> and cosine similarity
+              over preprocessed descriptions and tag encodings to recommend
+              books from a user's saved library. Single-page frontend in
+              vanilla JS with pagination, relevance badges, and a personal
+              library tab.
             </p>
           </div>
           <ul class="project-tech">
-            <li>FastAPI</li><li>Python</li><li>scikit-learn</li><li>JavaScript</li>
+            <li>FastAPI</li><li>Python</li><li>scikit-learn</li><li>NumPy / SciPy</li><li>JavaScript</li>
           </ul>
           <div class="project-links">
-            <a href="https://github.com/Iank314" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub →</a>
+            <a href="https://github.com/Iank314/BookRecommender" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub →</a>
           </div>
         </div>
         <div class="project-visual">
@@ -227,6 +237,84 @@ scores = cosine_similarity(query_vec, mat)
           </div>
         </div>
       </article>
+
+      <article class="project project-featured">
+        <div class="project-meta">
+          <p class="project-overline">Featured Project</p>
+          <h3 class="project-title"><a href="https://github.com/Iank314/django-employee-management" target="_blank" rel="noopener">Employee Management System</a></h3>
+          <div class="project-body">
+            <p>
+              A full-stack <strong>Django REST</strong> application managing
+              employees, departments, attendance, and performance — with
+              JWT-secured APIs, Swagger-documented endpoints, and a
+              PostgreSQL-backed relational schema shipped via Django
+              migrations.
+            </p>
+            <p>
+              Includes filtering, pagination, ordering, and search across
+              every resource, an optional Chart.js dashboard, Faker-based
+              database seeding, and a <code>docker-compose.yml</code> that
+              spins up the web service and database in one command.
+            </p>
+          </div>
+          <ul class="project-tech">
+            <li>Django</li><li>DRF</li><li>PostgreSQL</li><li>JWT</li><li>Swagger</li><li>Docker</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/Iank314/django-employee-management" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="visual-code">
+            <pre><code><span class="c-kw">class</span> <span class="c-fn">EmployeeViewSet</span>(viewsets.ModelViewSet):
+    queryset = Employee.objects.<span class="c-fn">select_related</span>(<span class="c-str">"department"</span>)
+    serializer_class   = EmployeeSerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends    = [DjangoFilterBackend, SearchFilter]
+    filterset_fields   = [<span class="c-str">"department"</span>, <span class="c-str">"role"</span>]
+    search_fields      = [<span class="c-str">"first_name"</span>, <span class="c-str">"last_name"</span>, <span class="c-str">"email"</span>]</code></pre>
+          </div>
+        </div>
+      </article>
+
+      <h3 class="other-heading">Other Noteworthy Projects</h3>
+
+      <div class="other-grid">
+        <article class="other-card">
+          <div class="other-card-head">
+            <span class="folder-icon" aria-hidden="true">◆</span>
+            <a href="https://github.com/Iank314/Phreddit" target="_blank" rel="noopener" class="other-link" aria-label="GitHub repository">↗</a>
+          </div>
+          <h4 class="other-title"><a href="https://github.com/Iank314/Phreddit" target="_blank" rel="noopener">Phreddit</a></h4>
+          <p class="other-desc">
+            A Reddit-style forum application built with the MERN stack.
+            Features user authentication, nested comments, subreddit-style
+            communities, and automated database seeding with randomized
+            users. Includes server and client test suites.
+          </p>
+          <ul class="other-tech">
+            <li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li>
+          </ul>
+        </article>
+
+        <article class="other-card">
+          <div class="other-card-head">
+            <span class="folder-icon" aria-hidden="true">◆</span>
+            <a href="https://github.com/Iank314/autobass" target="_blank" rel="noopener" class="other-link" aria-label="GitHub repository">↗</a>
+          </div>
+          <h4 class="other-title"><a href="https://github.com/Iank314/autobass" target="_blank" rel="noopener">autobass</a></h4>
+          <p class="other-desc">
+            A Bash backup automation tool that produces timestamped
+            <code>.tar.gz</code> archives with configurable source/target
+            directories via <code>archive.conf</code>, exclusion rules via
+            <code>.bassignore</code>, dry-run previews, and structured
+            logging.
+          </p>
+          <ul class="other-tech">
+            <li>Bash</li><li>Shell</li><li>Linux</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
     <section id="skills" class="section">
@@ -312,8 +400,29 @@ scores = cosine_similarity(query_vec, mat)
       </div>
     </section>
 
+    <section id="resume" class="section section-resume">
+      <div class="section-head">
+        <span class="section-num">06.</span>
+        <h2 class="section-title">Resume</h2>
+        <span class="section-rule"></span>
+      </div>
+      <div class="resume-card">
+        <div class="resume-copy">
+          <h3>Ian Kaufman — Software Engineer</h3>
+          <p>
+            Full one-page resume covering education, experience, projects,
+            skills, leadership, and certifications. Updated April 2026.
+          </p>
+        </div>
+        <div class="resume-actions">
+          <a href="Ian_Kaufman_Resume.pdf" class="btn btn-primary" download>Download PDF</a>
+          <a href="Ian_Kaufman_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">View in browser</a>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="section section-contact">
-      <span class="section-num">06.</span>
+      <span class="section-num">07.</span>
       <h2 class="contact-heading">Let's Connect</h2>
       <p class="contact-sub">
         I'm open to new-grad conversations, internship opportunities, and
@@ -323,8 +432,8 @@ scores = cosine_similarity(query_vec, mat)
       <a href="mailto:Kaufmanian49@gmail.com" class="btn btn-primary btn-lg">Say Hello</a>
       <div class="contact-links">
         <a href="https://github.com/Iank314" target="_blank" rel="noopener">github.com/Iank314</a>
-        <a href="https://www.linkedin.com/in/ian-kaufman-7a9408329/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="tel:9293237333">929-323-7333</a>
+        <a href="https://www.linkedin.com/in/ian-kaufman-7a9408329/" target="_blank" rel="noopener">linkedin.com/in/ian-kaufman</a>
+        <a href="mailto:Kaufmanian49@gmail.com">Kaufmanian49@gmail.com</a>
       </div>
     </section>
   </main>
