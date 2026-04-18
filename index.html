@@ -114,6 +114,7 @@
           <button class="tab active" data-tab="ally" role="tab">Ally Financial</button>
           <button class="tab" data-tab="mystage" role="tab">MyStage Music</button>
           <button class="tab" data-tab="springer" role="tab">Springer Capital</button>
+          <button class="tab" data-tab="desknet" role="tab">Desknet</button>
           <button class="tab" data-tab="bac" role="tab">Business Analytics Club</button>
         </div>
         <div class="tab-content">
@@ -138,6 +139,14 @@
             <ul>
               <li>Designed a normalized PostgreSQL schema (employees, departments, roles) with foreign keys, unique constraints, and composite/partial indexes aligned to high-frequency queries; shipped migrations via Django.</li>
               <li>Eliminated N+1 queries using <code>select_related</code>/<code>prefetch_related</code> and tuned execution plans with <code>EXPLAIN ANALYZE</code>, reducing p95 latency by 35% and cutting DB CPU/IO by 10% on heavy endpoints.</li>
+            </ul>
+          </article>
+          <article class="panel" id="desknet">
+            <h3>Technology Intern<span class="company"> @ Desknet</span></h3>
+            <p class="meta">May 2023 – Aug 2023 · Jersey City, NJ</p>
+            <ul>
+              <li>Built a <strong>Spring Boot</strong> service integrated with <strong>ActiveMQ</strong> to measure end-to-end latency of messages exchanged by the Desknetinc.com platform, instrumenting producers and consumers to publish per-message timing data for diagnostic review.</li>
+              <li>Worked across backend services to surface performance telemetry from live message flows, targeting bottleneck identification in the company's internal messaging pipeline.</li>
             </ul>
           </article>
           <article class="panel" id="bac">
