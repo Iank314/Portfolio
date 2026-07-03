@@ -40,8 +40,8 @@
       <p class="hero-sub">
         I'm a Computer Science &amp; Applied Math student at Stony Brook University,
         focused on backend engineering, distributed systems, and data infrastructure.
-        Currently interning as a Data Engineer at MyStage Music and incoming
-        Software Engineering Intern at Ally Financial.
+        Currently a Technology Intern at Ally Financial and an incoming Software
+        Development Engineer Intern at Amazon Web Services.
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View my work</a>
@@ -68,16 +68,16 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I'm a junior at <strong>Stony Brook University</strong> pursuing a
+            I'm a senior at <strong>Stony Brook University</strong> pursuing a
             double major in Computer Science and Applied Mathematics &amp;
-            Statistics, with a 3.65 GPA. My interests sit at the intersection
+            Statistics, with a 3.64 GPA. My interests sit at the intersection
             of <strong>backend engineering</strong>, <strong>distributed
             systems</strong>, and <strong>data infrastructure</strong>.
           </p>
           <p>
             I've shipped production work across the stack, architecting
             deduplication pipelines over 300K+ Firestore records, tuning
-            PostgreSQL query plans to cut p95 latency by 35%, and building a
+            PostgreSQL query plans to cut p95 latency by 30%, and building a
             distributed task queue with atomic concurrent job claiming. I care
             about writing code that's correct under concurrency, observable in
             production, and maintainable as systems grow.
@@ -102,8 +102,8 @@
           <div class="card-row"><span class="card-label">Role</span><span>Software Engineer</span></div>
           <div class="card-row"><span class="card-label">Location</span><span>New York, NY</span></div>
           <div class="card-row"><span class="card-label">School</span><span>Stony Brook University</span></div>
-          <div class="card-row"><span class="card-label">Grad</span><span>May 2027</span></div>
-          <div class="card-row"><span class="card-label">GPA</span><span>3.65 / 4.00</span></div>
+          <div class="card-row"><span class="card-label">Grad</span><span>Dec 2027</span></div>
+          <div class="card-row"><span class="card-label">GPA</span><span>3.64 / 4.00</span></div>
           <div class="card-row"><span class="card-label">Focus</span><span>Backend &amp; Data</span></div>
         </div>
       </div>
@@ -117,26 +117,35 @@
       </div>
       <div class="experience">
         <div class="tabs" role="tablist">
-          <button class="tab active" data-tab="ally" role="tab">Ally Financial</button>
+          <button class="tab active" data-tab="aws" role="tab">Amazon Web Services</button>
+          <button class="tab" data-tab="ally" role="tab">Ally Financial</button>
           <button class="tab" data-tab="mystage" role="tab">MyStage Music</button>
           <button class="tab" data-tab="springer" role="tab">Springer Capital</button>
           <button class="tab" data-tab="desknet" role="tab">Desknet</button>
           <button class="tab" data-tab="bac" role="tab">Business Analytics Club</button>
         </div>
         <div class="tab-content">
-          <article class="panel active" id="ally">
-            <h3>Technology Intern, Software Engineer (ETO)<span class="company"> @ Ally Financial</span></h3>
-            <p class="meta">Incoming May 2026 · Charlotte, NC</p>
+          <article class="panel active" id="aws">
+            <h3>Software Development Engineer Intern<span class="company"> @ Amazon Web Services</span></h3>
+            <p class="meta">Incoming Fall 2026 · Portland, OR</p>
             <ul>
-              <li>Incoming intern on the Enterprise Technology &amp; Platform Automation team, supporting software engineering initiatives across internal platforms.</li>
+              <li>Incoming SDE Intern on AWS, selected for a Fall 2026 internship after completing Amazon's full technical interview process.</li>
+            </ul>
+          </article>
+          <article class="panel" id="ally">
+            <h3>Technology Intern, Systems Architecture (ETO)<span class="company"> @ Ally Financial</span></h3>
+            <p class="meta">May 2026 – Present · Charlotte, NC</p>
+            <ul>
+              <li>Built an approved Splunk and ServiceNow API automation service for IP/subnet traffic lookup, flow selection, and formatted access-request generation — saving an estimated 40+ hours annually, cutting manual effort 30%, and improving firewall request workflow speed 25%.</li>
+              <li>Designed a metadata-to-JSON conversion utility that injects structured JSON directly into projects, preserving 500 limited Nutanix project categories and improving metadata visibility an estimated 60% by replacing category-based tagging with a more scalable metadata approach.</li>
             </ul>
           </article>
           <article class="panel" id="mystage">
-            <h3>Data Engineering Intern<span class="company"> @ MyStage Music</span></h3>
-            <p class="meta">Jan 2026 – Present · Remote</p>
+            <h3>Software Engineering Intern<span class="company"> @ MyStage Music</span></h3>
+            <p class="meta">Jan 2026 – May 2026 · Remote</p>
             <ul>
-              <li>Architected and deployed an end-to-end deduplication pipeline processing 300K+ Firestore records, ingesting raw data from Firebase, enforcing schema integrity via Pydantic models, executing SQL deduplication and scoring transformations in BigQuery, and writing validated results back to Firestore.</li>
-              <li>Implemented bidirectional Firestore↔BigQuery sync workflows, ensuring production admin collections stay current with deduplicated output surfaced on the admin UI.</li>
+              <li>Architected and deployed an end-to-end deduplication and automerge pipeline processing 300K+ Firestore records, using Firebase, Pydantic, and BigQuery SQL transformations with Firestore writeback to surface validated results in the admin UI.</li>
+              <li>Containerized the deduplication and automerge pipeline with Docker for Google Cloud deployment, enabling weekly runs that refresh validated Firestore records automatically.</li>
             </ul>
           </article>
           <article class="panel" id="springer">
@@ -144,7 +153,7 @@
             <p class="meta">Jul 2025 – Oct 2025 · Remote</p>
             <ul>
               <li>Designed a normalized PostgreSQL schema (employees, departments, roles) with foreign keys, unique constraints, and composite/partial indexes aligned to high-frequency queries; shipped migrations via Django.</li>
-              <li>Eliminated N+1 queries using <code>select_related</code>/<code>prefetch_related</code> and tuned execution plans with <code>EXPLAIN ANALYZE</code>, reducing p95 latency by 35% and cutting DB CPU/IO by 10% on heavy endpoints.</li>
+              <li>Refactored backend data-access patterns and eliminated N+1 queries using <code>select_related</code>/<code>prefetch_related</code>, tuning execution plans with <code>EXPLAIN ANALYZE</code> to decrease p95 latency 30% and improve API response consistency for cleaner reporting.</li>
             </ul>
           </article>
           <article class="panel" id="desknet">
@@ -159,8 +168,8 @@
             <h3>Vice President &amp; Co-Founder<span class="company"> @ Business Analytics Club, SBU</span></h3>
             <p class="meta">Jan 2026 – Present · Stony Brook, NY</p>
             <ul>
-              <li>Co-founded and led a student organization focused on analytics and data-driven decision making.</li>
-              <li>Organized industry speaker events with professionals from finance/tech firms such as Alvarez &amp; Marsal.</li>
+              <li>Co-founded and led a student organization of 30+ members focused on analytics and data-driven decision making.</li>
+              <li>Organized industry speaker events with professionals from finance/tech firms such as Alvarez &amp; Marsal, drawing 50+ attendees.</li>
             </ul>
           </article>
         </div>
@@ -216,27 +225,28 @@
       <article class="project project-featured reverse">
         <div class="project-meta">
           <p class="project-overline">Featured Project</p>
-          <h3 class="project-title"><a href="https://github.com/Iank314/BookRecommender" target="_blank" rel="noopener">Book Recommender</a></h3>
+          <h3 class="project-title"><a href="https://iansbookrecs.com" target="_blank" rel="noopener">Book Recommender</a></h3>
           <div class="project-body">
             <p>
-              A full-stack recommendation system with a FastAPI backend that
-              aggregates and reconciles results from <strong>Google Books</strong>
-              and <strong>Open Library</strong>, deduplicating across APIs and
-              scoring each match on a 0–100 hybrid formula (relevance +
-              popularity signals).
+              A full-stack book recommendation app deployed on
+              <strong>AWS Lightsail</strong> with FastAPI, SQLite, Docker, and a
+              vanilla JavaScript frontend — serving 20+ users with account-based
+              libraries and personalized recommendations.
             </p>
             <p>
-              Uses <strong>TF-IDF vectorization</strong> and cosine similarity
-              over preprocessed descriptions and tag encodings to recommend
-              books from a user's saved library. Single-page frontend in
-              vanilla JS with pagination, relevance badges, and a personal
-              library tab.
+              A content-based engine blends <strong>IDF-weighted</strong>
+              title/description similarity with metadata enrichment from Open
+              Library, plus language, author, and genre filtering and
+              series-volume collapsing. Per-user accounts use PBKDF2-hashed
+              passwords and session cookies, and a thread-safe LRU cache skips
+              unchanged recommendation runs.
             </p>
           </div>
           <ul class="project-tech">
-            <li>FastAPI</li><li>Python</li><li>scikit-learn</li><li>NumPy / SciPy</li><li>JavaScript</li>
+            <li>FastAPI</li><li>Python</li><li>scikit-learn</li><li>SQLite</li><li>Docker</li><li>AWS Lightsail</li>
           </ul>
           <div class="project-links">
+            <a href="https://iansbookrecs.com" target="_blank" rel="noopener" aria-label="Live site">Live ↗</a>
             <a href="https://github.com/Iank314/BookRecommender" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub →</a>
           </div>
         </div>
@@ -334,6 +344,7 @@ scores = cosine_similarity(query_vec, mat)
           <ul>
             <li>Django</li><li>FastAPI</li><li>Flask</li><li>SQLAlchemy</li>
             <li>React</li><li>Node.js / Express</li><li>Pytest</li><li>NumPy / Pandas</li>
+            <li>Matplotlib</li>
           </ul>
         </div>
         <div class="skill-group">
@@ -346,7 +357,7 @@ scores = cosine_similarity(query_vec, mat)
         <div class="skill-group">
           <h3>Cloud &amp; Infrastructure</h3>
           <ul>
-            <li>AWS (EC2, S3)</li><li>Azure App Service</li>
+            <li>AWS (EC2, S3, Lightsail)</li><li>Azure App Service</li>
             <li>GCP BigQuery</li><li>GCP Firestore</li>
           </ul>
         </div>
@@ -363,10 +374,11 @@ scores = cosine_similarity(query_vec, mat)
         <div class="edu-card primary">
           <div class="edu-header">
             <h3>Stony Brook University</h3>
-            <span class="edu-date">Expected May 2027</span>
+            <span class="edu-date">Expected Dec 2027</span>
           </div>
           <p class="edu-degree">B.S. Computer Science &amp; Applied Mathematics and Statistics (Double Major)</p>
-          <p class="edu-gpa">GPA: 3.65 / 4.00</p>
+          <p class="edu-gpa">GPA: 3.64 / 4.00</p>
+          <p class="edu-degree">Teaching Assistant · Finite Mathematical Structures, Technology in Media</p>
           <p class="edu-label">Relevant Coursework</p>
           <ul class="edu-courses">
             <li>Software Development</li>
@@ -409,7 +421,7 @@ scores = cosine_similarity(query_vec, mat)
           <h3>Ian Kaufman | Software Engineer</h3>
           <p>
             Full one-page resume covering education, experience, projects,
-            skills, leadership, and certifications. Updated April 2026.
+            skills, leadership, and certifications. Updated July 2026.
           </p>
         </div>
         <div class="resume-actions">
