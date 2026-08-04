@@ -1,3 +1,11 @@
+// Hide the portrait frame if the image fails to load
+const headshot = document.getElementById('headshot');
+if (headshot) {
+  headshot.addEventListener('error', () => {
+    headshot.parentElement.style.display = 'none';
+  });
+}
+
 // Nav: shadow on scroll
 const nav = document.querySelector('.nav');
 const onScroll = () => {

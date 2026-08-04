@@ -74,7 +74,7 @@
   <header id="top" class="hero">
     <div class="hero-inner">
       <div class="hero-portrait" aria-hidden="true">
-        <img src="Headshot.png" alt="Ian Kaufman" onerror="this.parentElement.style.display='none'" />
+        <img src="Headshot.png" alt="Ian Kaufman" id="headshot" />
       </div>
       <p class="hero-kicker">Hi, my name is</p>
       <h1 class="hero-name">Ian Kaufman.</h1>
@@ -87,7 +87,7 @@
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View my work</a>
-        <a href="Ian_Kaufman_Resume.pdf" class="btn btn-outline" download>Download resume</a>
+        <a href="Ian_Kaufman_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">View resume</a>
         <a href="mailto:Kaufmanian49@gmail.com" class="btn btn-ghost">Get in touch</a>
       </div>
       <div class="hero-socials">
@@ -279,9 +279,9 @@
               A content-based engine blends <strong>IDF-weighted</strong>
               title/description similarity with metadata enrichment from Open
               Library, plus language, author, and genre filtering and
-              series-volume collapsing. Per-user accounts use PBKDF2-hashed
-              passwords and session cookies, and a thread-safe LRU cache skips
-              unchanged recommendation runs.
+              series-volume collapsing. Per-user libraries are isolated with
+              standard hashed-credential storage, and a thread-safe LRU cache
+              skips unchanged recommendation runs.
             </p>
           </div>
           <ul class="project-tech">
@@ -467,8 +467,7 @@ scores = cosine_similarity(query_vec, mat)
           </p>
         </div>
         <div class="resume-actions">
-          <a href="Ian_Kaufman_Resume.pdf" class="btn btn-primary" download>Download PDF</a>
-          <a href="Ian_Kaufman_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">View in browser</a>
+          <a href="Ian_Kaufman_Resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">View resume (PDF)</a>
         </div>
       </div>
     </section>
