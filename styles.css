@@ -712,32 +712,30 @@ code {
 }
 
 /* ---------- Resume ---------- */
-.resume-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 2rem;
-  box-shadow: var(--shadow);
-}
-.resume-copy h3 {
-  color: var(--text);
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-}
 .resume-copy p {
   color: var(--text-dim);
-  max-width: 520px;
+  max-width: 620px;
+  margin-bottom: 2rem;
 }
-.resume-actions {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+.resume-preview {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.resume-preview picture { display: block; }
+.resume-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.resume-caption {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
 /* ---------- Contact ---------- */

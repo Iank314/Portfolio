@@ -82,12 +82,12 @@
       <p class="hero-sub">
         I'm a Computer Science &amp; Applied Math student at Stony Brook University,
         focused on backend engineering, distributed systems, and data infrastructure.
-        Currently a Technology Intern at Ally Financial and an incoming Software
-        Development Engineer Intern at Amazon Web Services.
+        Currently a Software Development Engineer Intern at Amazon Web Services
+        on the Training &amp; Certification team.
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View my work</a>
-        <a href="Ian_Kaufman_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">View resume</a>
+        <a href="#resume" class="btn btn-outline">View resume</a>
         <a href="mailto:Ian.Kaufman.Work@gmail.com" class="btn btn-ghost">Get in touch</a>
       </div>
       <div class="hero-socials">
@@ -144,7 +144,7 @@
           <div class="card-row"><span class="card-label">Role</span><span>Software Engineer</span></div>
           <div class="card-row"><span class="card-label">Location</span><span>New York, NY</span></div>
           <div class="card-row"><span class="card-label">School</span><span>Stony Brook University</span></div>
-          <div class="card-row"><span class="card-label">Grad</span><span>Dec 2027</span></div>
+          <div class="card-row"><span class="card-label">Grad</span><span>May 2027</span></div>
           <div class="card-row"><span class="card-label">GPA</span><span>3.64 / 4.00</span></div>
           <div class="card-row"><span class="card-label">Focus</span><span>Backend &amp; Data</span></div>
         </div>
@@ -169,16 +169,18 @@
         <div class="tab-content">
           <article class="panel active" id="aws">
             <h3>Software Development Engineer Intern<span class="company"> @ Amazon Web Services</span></h3>
-            <p class="meta">Incoming Fall 2026 · Training &amp; Certification · Portland, OR</p>
+            <p class="meta">Aug 2026 – Present · Training &amp; Certification · Portland, OR</p>
             <ul>
-              <li>Incoming SDE Intern on the AWS Training and Certification team, selected for a Fall 2026 internship after completing Amazon's full technical interview process.</li>
+              <li>Developed an AI-powered Learner Assistant using <strong>Amazon Bedrock</strong>, delivering three learner-facing capabilities — Socratic tutoring, personalized post-assessment coaching, and contextual issue reporting — with guardrails preventing users from obtaining assessment answers, plus localization infrastructure across 3 languages.</li>
+              <li>Redesigned and refactored the AWS Skill Builder Assessment Player, decomposing thousands of lines of unstructured code into a modular Model-View-Container architecture and rebuilding core assessment workflows with <strong>React</strong>, <strong>TypeScript</strong>, and <strong>GraphQL</strong> to improve maintainability, accessibility, and developer velocity.</li>
+              <li>Contributed to production feature development on 10+ tickets and bug resolution across AWS Skill Builder, including environment-aware configuration mappings across 4 deployment stages (development, beta, gamma, production) that automatically resolve internal identifiers and eliminate manual configuration for future developers.</li>
             </ul>
           </article>
           <article class="panel" id="ally">
             <h3>Technology Intern, Systems Architecture (ETO)<span class="company"> @ Ally Financial</span></h3>
-            <p class="meta">May 2026 – Present · Charlotte, NC</p>
+            <p class="meta">May 2026 – Aug 2026 · Charlotte, NC</p>
             <ul>
-              <li>Built an approved Splunk and ServiceNow API automation service for IP/subnet traffic lookup, flow selection, and formatted access-request generation — saving an estimated 40+ hours annually, cutting manual effort 30%, and improving firewall request workflow speed 25%.</li>
+              <li>Designed and developed an end-to-end Splunk–ServiceNow API service in an Agile environment that automated firewall request submissions, IP/subnet traffic analysis, flow selection, and access-request formatting — saving 15+ hours weekly, reducing manual effort 30%, and accelerating workflows 25% per Platform Automations team estimates.</li>
               <li>Designed a metadata-to-JSON conversion utility that injects structured JSON directly into projects, preserving 500 limited Nutanix project categories and improving metadata visibility an estimated 60% by replacing category-based tagging with a more scalable metadata approach.</li>
             </ul>
           </article>
@@ -187,7 +189,7 @@
             <p class="meta">Jan 2026 – May 2026 · Remote</p>
             <ul>
               <li>Architected and deployed an end-to-end deduplication and automerge pipeline processing 300K+ Firestore records, using Firebase, Pydantic, and BigQuery SQL transformations with Firestore writeback to surface validated results in the admin UI.</li>
-              <li>Containerized the deduplication and automerge pipeline with Docker for Google Cloud deployment, enabling weekly runs that refresh validated Firestore records automatically.</li>
+              <li>Containerized the deduplication and automerge pipeline with Docker for Google Cloud deployment, enabling weekly runs that refresh validated Firestore records automatically — saving 30+ hours monthly by replacing manual data cleaning.</li>
             </ul>
           </article>
           <article class="panel" id="springer">
@@ -272,16 +274,18 @@
             <p>
               A full-stack book recommendation app deployed on
               <strong>AWS Lightsail</strong> with FastAPI, SQLite, Docker, and a
-              vanilla JavaScript frontend — serving 20+ users with account-based
+              vanilla JavaScript frontend — serving 30+ users with account-based
               libraries and personalized recommendations.
             </p>
             <p>
               A content-based engine blends <strong>IDF-weighted</strong>
               title/description similarity with metadata enrichment from Open
               Library, plus language, author, and genre filtering and
-              series-volume collapsing. Per-user libraries are isolated with
-              standard hashed-credential storage, and a thread-safe LRU cache
-              skips unchanged recommendation runs.
+              series-volume collapsing. Per-user accounts use <strong>PBKDF2-hashed</strong>
+              passwords with session-cookie authentication, personal libraries
+              carry user-defined sections and reading statuses that scope
+              recommendations, and a thread-safe LRU cache skips unchanged
+              recommendation runs.
             </p>
           </div>
           <ul class="project-tech">
@@ -378,14 +382,14 @@ scores = cosine_similarity(query_vec, mat)
           <h3>Languages</h3>
           <ul>
             <li>Java</li><li>Python</li><li>C / C++</li><li>SQL</li>
-            <li>JavaScript</li><li>R</li><li>HTML/CSS</li><li>Shell Scripting</li>
+            <li>JavaScript</li><li>TypeScript</li><li>R</li><li>HTML/CSS</li><li>Shell Scripting</li>
           </ul>
         </div>
         <div class="skill-group">
           <h3>Frameworks &amp; Libraries</h3>
           <ul>
             <li>Django</li><li>FastAPI</li><li>Flask</li><li>SQLAlchemy</li>
-            <li>React</li><li>Node.js / Express</li><li>Pytest</li><li>NumPy / Pandas</li>
+            <li>React</li><li>Node.js / Express</li><li>GraphQL</li><li>Pytest</li><li>NumPy / Pandas</li>
             <li>Matplotlib</li>
           </ul>
         </div>
@@ -399,8 +403,9 @@ scores = cosine_similarity(query_vec, mat)
         <div class="skill-group">
           <h3>Cloud &amp; Infrastructure</h3>
           <ul>
-            <li>AWS (EC2, S3, Lightsail)</li><li>Azure App Service</li>
-            <li>GCP BigQuery</li><li>GCP Firestore</li>
+            <li>AWS (EC2, S3, Lightsail)</li><li>Amazon Bedrock</li>
+            <li>Azure App Service</li><li>GCP BigQuery</li>
+            <li>GCP Firestore</li><li>Supabase</li>
           </ul>
         </div>
       </div>
@@ -416,7 +421,7 @@ scores = cosine_similarity(query_vec, mat)
         <div class="edu-card primary">
           <div class="edu-header">
             <h3>Stony Brook University</h3>
-            <span class="edu-date">Expected Dec 2027</span>
+            <span class="edu-date">Expected May 2027</span>
           </div>
           <p class="edu-degree">B.S. Computer Science &amp; Applied Mathematics and Statistics (Double Major)</p>
           <p class="edu-gpa">GPA: 3.64 / 4.00</p>
@@ -458,18 +463,24 @@ scores = cosine_similarity(query_vec, mat)
         <h2 class="section-title">Resume</h2>
         <span class="section-rule"></span>
       </div>
-      <div class="resume-card">
-        <div class="resume-copy">
-          <h3>Ian Kaufman | Software Engineer</h3>
-          <p>
-            Full one-page resume covering education, experience, projects,
-            skills, leadership, and certifications. Updated July 2026.
-          </p>
-        </div>
-        <div class="resume-actions">
-          <a href="Ian_Kaufman_Resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">View resume (PDF)</a>
-        </div>
+      <div class="resume-copy">
+        <p>
+          One page covering education, experience, projects, skills, and
+          leadership. Updated September 2026.
+        </p>
       </div>
+      <figure class="resume-preview">
+        <picture>
+          <source srcset="resume-preview.webp" type="image/webp" />
+          <img src="resume-preview.png"
+               alt="Resume of Ian Kaufman: Stony Brook University B.S. in Computer Science and Applied Math and Statistics; software engineering internships at Amazon Web Services, Ally Financial, and MyStage Music; Book Recommender and Distributed Task Queue projects; Vice President and co-founder of the Business Analytics Club."
+               width="1700" height="2200" loading="lazy" decoding="async" />
+        </picture>
+        <figcaption class="resume-caption">
+          Trouble reading it here?
+          <a href="resume-preview.png" target="_blank" rel="noopener">Open the full-size image&nbsp;&#8599;</a>
+        </figcaption>
+      </figure>
     </section>
 
     <section id="contact" class="section section-contact">
